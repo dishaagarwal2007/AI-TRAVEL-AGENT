@@ -1,0 +1,33 @@
+/* Base resets to make everything smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Animation Classes */
+.fade-in-up {
+    animation: fadeInUp 0.6s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Keyframes for the animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* A cinematic glow effect for the cards */
+.itinerary-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.itinerary-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(37, 99, 235, 0.2);
+}
